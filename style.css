@@ -1,16 +1,18 @@
 header{
-    background-color: black;
+    background-color: #494949;
     
 }
 
 *{
-    margin:0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 a:link, a:visited, a:hover, a:active{
     color: rgb(255, 255, 255);
     font-size: 16px;
+    text-decoration: none;
+
 }
 
 body {
@@ -33,10 +35,11 @@ h2{
 p{
     font-size: 16px;
     text-align-last: center;
+    color: rgb(255, 255, 255);
 }
 
 footer{
-    background-color: black;
+    background-color: #494949;
 }
 
 .carousel{
@@ -63,6 +66,7 @@ footer{
     cursor: pointer;
     transition: 450ms all;
     transform-origin: center;
+    position: relative;
 
 }
 
@@ -78,3 +82,22 @@ footer{
     transform: scale(1.5);
     opacity: 1;
 }
+
+.carousel-item__img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-item__details{
+    font-size: 10px;
+    opacity: 0;
+    transition: 450 ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
