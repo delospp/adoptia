@@ -38,6 +38,10 @@ p{
     color: rgb(255, 255, 255);
 }
 
+html {
+  overflow-x: hidden;
+  }
+
 footer{
     background-color: #494949;
 }
