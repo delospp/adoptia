@@ -148,6 +148,10 @@ p{
   
 }
 
+html {
+  overflow-x: hidden;
+  }
+
 footer{
     background-color: #494949;
 }
