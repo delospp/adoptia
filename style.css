@@ -1,7 +1,6 @@
 .contenedorsillo{
   
   width: 100%;
-  max-width: 1500px;
   margin: 10px auto;
   display: grid;
   grid-gap:5px;
@@ -9,7 +8,7 @@
   grid-template-rows: repeat(6, auto);
 
   grid-template-areas: "header header"
-                        "menu menu"
+                        "menudo menudo"
                         "carousel carousel"
                         "carousel carousel"
                         "carousel carousel"
@@ -31,7 +30,7 @@
   width: 100%;
 }
 .header__img {
-  margin-left: 30px;
+  margin-left: 20px;
   width: 200px;
 }
 .header__menu ul {
@@ -66,14 +65,14 @@
   align-items: center;
   display: flex;
   cursor: pointer;
-  margin-right: 50px;
+  margin-right: 20px;
 }
 .header__menu--profile img {
   margin-right: 10px;
   width: 50px;
 }
 .contenedorsillo .menu{
-  grid-area: menu;
+  grid-area: menudo;
   flex-direction:row;
   justify-content:space-between;
   align-items:center;
@@ -233,7 +232,7 @@ html {
 @media screen and (max-width: 720px){
 .contenedorsillo{
   grid-template-areas:  "header header"
-                        "menu menu"
+                        "menudo menudo"
                         "carousel carousel"
                         "carousel carousel"
                         "carousel carousel"
