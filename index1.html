@@ -6,36 +6,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicia Sesión</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <script src="init.js"></script>
 </head>
  <body style="background-color: #222222;">
-        <header>
-            <h1><strong>ADOPTINO</strong></h1>
-             <div class="logote"><img src="./img/adoptino.jpeg" alt="logo" width="150px" height="78px"></a></h1></div>
-        </header>
-          <div class="menu">
-              <div class="a"><a href="index.html">ADOPTA </a></div>
-                  <div class="b"><a href="index.html">¡REPORTA!</a></div>
-                  <div class="c"><a href="index.html">ALIADOS</a></div>
-                  <div class="d"><a href="index.html">CONTACTANOS</a></div>
-                  <div class="e"><a href="index1.html">INICIA SESIÓN</a> 
-             </div>
-          </div> 
-    <section id="ingrese">
-        <div class="mb-3">
-            <label id="ingresa" for="usuario" class="form-label"><h4>Usuario</h4></label>
-            <input type="text" id="nombreUsuario" name="usuario" class="form-control">
-        </div>
-        <div class="mb-3">
-            <label id="ingresa"for="Clave" class="form-label"><h4>Contraseña</h4></label>
-            <input type="password" id="claveUsuario" name="clave" class="form-control">
-        </div>
-    <div style="text-align: center;" class="mb-3">
-        <button type="submit" class="btn btn-primary" onclick="verificar()">Ingresar</button>
-    </div>
-    </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <div class="contenedorsillo">
+            <header class="header">
+                <img class="header__img" src="./img/adoptino.jpeg" alt="logo">
+            <div class="header__menu">
+                <div class="header__menu--profile">
+                <img src="./img/user-icon.png" alt="user-icon">
+                <p>Perfil</p>
+                </div>
+                <ul>
+                <li><a href="index1.html">Cuenta</a></li>
+               <li><a href="index1.html">Registrarse</a></li>
+                <li><a href="/">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+            </header>
 
+
+            <div class="menu">
+                <div><a href="index.html">ADOPTA</a></div>
+                    <div><a href="index.html">¡REPORTA!</a></div>
+                    <div><a href="index.html">ALIADOS</a></div>
+                    <div><a href="#Contactanos">CONTACTANOS</a></div>            
+            </div>
+        <section class="ingrese">
+          <h2 id="Adopta">INICIA SESIÓN</h2>
+      
+            <div class="mb-3">
+                <label id="ingresa" for="usuario" class="form-label"><h4>Usuario</h4></label>
+                <input type="text" id="nombreUsuario" name="usuario" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label id="ingresa"for="Clave" class="form-label"><h4>Contraseña</h4></label>
+                <input type="password" id="claveUsuario" name="clave" class="form-control">
+            </div>
+        <div style="text-align: center;" class="mb-3">
+            <button type="submit" class="btn btn-primary" onclick="verificar()">Ingresar</button>
+        </div>
+        </section>
+        <section class="Registro">
+          <h2 id="Adopta">CREA UNA CUENTA</h2>
+        </section>
+        <footer>
+            <section style="text-align-last: center;">
+              <h2 id="Contactanos">CONTACTANOS</h2>
+              <p>Facebook</p>
+              <p>TERMINOS Y CONDICIONES</p>        
+              </section>
+          </footer>
+    <style>
+        .contenedorsillo{
+  
+  width: 100%;
+  max-width: 1500px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap:5px;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(6, auto);
+
+  grid-template-areas: "header header"
+                        "menu  menu"
+                        "ingrese Registro"
+                        "ingrese Registro"
+                        "ingrese Registro"
+                        "footer footer";
+  
+}
+.contenedorsillo .header {
+  grid-area: header;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background: #8f57fd;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+h2{
+  color: white;
+  font-size: 20px;
+  text-align-last: center;
+  margin: 10px;
+  font-family:'Franklin Gothic Medium';
+}
+p{
+    font-size: 16px;
+    text-align-last: center;
+    color: rgb(255, 255, 255);
+}
+.header__img {
+  margin-left: 30px;
+  width: 200px;
+}
+.header__menu ul {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px -14px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+	display: block;
+}
+
+.header__menu li {
+  margin: 5px 0px;
+  display: inline-flex;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  margin-right: 50px;
+}
+.header__menu--profile img {
+  margin-right: 10px;
+  width: 50px;
+}
+.contenedorsillo .menu{
+  grid-area: menu;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(187, 100, 183);
+  padding: 8px; 
+}
+label{
+margin-left:  50px;
+text-align: left;
+color:white;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contenedorsillo .ingrese{
+  width: 100%;
+  background-color: rgb(14, 0, 32);
+  display:block;
+  justify-content: center;
+  text-align: left;
+  border-radius: 2%;
+}
+.contenedorsillo .Registro{
+  background-color: rgb(51, 0, 75);
+  display:block;
+  justify-content:left;
+  text-align: left;
+  border-radius: 5%;
+  width:100%;
+}
+footer{
+    grid-area: footer;
+    background: #7f4fdf;
+
+}
+a:link, a:visited, a:hover, a:active{
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  text-decoration: none;
+  margin:20px;
+}
+@media screen and (max-width: 768px){
+.contenedorsillo{
+  grid-template-areas:  "header header"
+                        "menu  menu"
+                        "ingrese  Registro"
+                        "ingrese  Registro"
+                        "ingrese  Registro"
+                        "footer footer";
+}
+}
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</div>
 </body>
 </html>
