@@ -81,7 +81,7 @@
   width: 50px;
 }
 
-.adopteichon, .reporteichon, .aliadeichon{
+.adopteichon, .reporteichon, .aliadeichon {
   grid-area:adopteichon, reporteichon, aliadeichon;
   width: 100%;
   background: rgb(26, 24, 25);
@@ -93,9 +93,10 @@
   text-align-last: center;
   font-family: 'Franklin Gothic Medium';
 }
-.contenedorsillo .footer{
+footer{
     grid-area: footer;
-    background-color: #26124e;
+    color: rgb(56, 102, 228);
+    background: #26124e;
     width: 100%;
 }
 .contenedorsillo .carousel {
@@ -115,7 +116,6 @@ a:link, a:visited, a:hover, a:active{
 *{
   margin: 0px;
   padding: 0px;
-  overflow-x: hidden;
 }
 p{
     font-size: 16px;
