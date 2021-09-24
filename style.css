@@ -38,6 +38,7 @@ html::-webkit-scrollbar{
   color: white;
   display: flex;
   width: 100%;
+  padding: 8px; 
   justify-content: space-between;
   top: 0px;
 }
@@ -102,9 +103,6 @@ footer{
     background: #26124e;
     width: 100%;
 }
-.contenedorsillo .carousel::-webkit-scrollbar{
-  width: 1px;
-}
 .contenedorsillo .carousel {
   grid-area: carousel;
   overflow: scroll;
@@ -144,7 +142,7 @@ body {
   padding-bottom: 50px;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 .carousel__container:hover .carousel-item {
