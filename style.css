@@ -1,12 +1,12 @@
 .header {
   align-items: center;
-  background: #8f57fd;
   color: white;
   display: flex;
   height: 100px;
   justify-content: space-between;
   top: 0px;
   width: 100%;
+  background: #F7B034
 }
 
 .header__img {
@@ -16,6 +16,7 @@
 
 .header__menu {
 	margin-right: 30px;
+  background-color: #F7B034;
 }
 
 .header__menu ul {
@@ -26,34 +27,41 @@
   position: absolute;
   width: 100px;
   text-align: right;
+  background-color: #F7B034;
 }
 
 .header__menu:hover ul, ul:hover {
 	display: block;
+  
 }
 
 .header__menu li {
   margin: 10px 0px;
+  
 }
 
 .header__menu li a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; 
 }
 
 .header__menu li a:hover {
-  text-decoration: underline;
+  font-weight: bolder;
+  color: #F77428;
+  
 }
 
 .header__menu--profile {
   align-items: center;
   display: flex;
   cursor: pointer;
+  background-color: #F7B034;
 }
 
 .header__menu--profile img {
   margin-right: 8px;
   width: 40px;
+  background-color: #F7B034;
 }
 
 
@@ -75,7 +83,7 @@ body {
 }
 
 h1{
-    color: rgb(213, 46, 219);
+    color: #F77428;
     font-size: 40px;
     text-align-last:center;
     font-family: 'Gill Sans MT';
@@ -83,7 +91,7 @@ h1{
 }
 
 h2{
-    color: rgb(56, 102, 228);
+    color: #F7B034;
     font-size: 25px;
     text-align-last: center;
 }
@@ -118,25 +126,22 @@ p{
   display:inline-flex;
   flex-direction:row;
   flex-wrap:wrap;
-  justify-content:space-between;
-  align-items:unset;
+  justify-content: space-between;
+  align-items: stretch;
   align-content:flex-start;
   width: 100%;
   height: 40px;
   background-color: rgb(187, 100, 183);
-  padding: 10px;
+  
   
 }
-.logote{
-  display:inline-block;
-  order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height: auto;
-  width: 100%;
-  text-align: center;
 
+.menu a:hover {
+  font-weight: bolder;
+  color: #F7B034;
+  
 }
+
 .a{
   display:inline-flex;
   order:0;
@@ -201,7 +206,7 @@ html {
   }
 
 footer{
-    background-color: #494949;
+  background-color: #494949;
 }
 
 .carousel {
@@ -298,3 +303,87 @@ footer{
 .carousel-item__details--img2 {
   width: 10px;
 }
+
+.contenedorsillo{
+
+  width: 100%;
+  height: 100%;
+  background:black;
+  margin: 10px auto;
+  display: grid;
+  grid-gap:5px;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(5, auto);
+  
+  grid-template-areas: "header header"
+                      "menudo  menudo"
+                      "ingrese Registro"
+                      "ingrese Registro"
+                      "footer footer";
+  
+  }
+  .contenedorsillo .header {
+  grid-area: header;
+  align-items: center;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  background: #8f57fd;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+  }
+  
+  
+  .contenedorsillo .menu{
+  grid-area:menudo;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:center;
+  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(187, 100, 183);
+  padding: 8px; 
+  }
+  label{
+  margin-left:  50px;
+  text-align: left;
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .contenedorsillo .ingrese{
+  grid-area:ingrese;
+  width: 100%;
+  background-color: rgb(14, 0, 32);
+  display:block;
+  justify-content: center;
+  text-align: left;
+  border-radius: 2%;
+  }
+  .contenedorsillo .Registro{
+  grid-area: Registro;
+  background-color: rgb(51, 0, 75);
+  display:block;
+  justify-content:left;
+  text-align: left;
+  border-radius: 5%;
+  width:100%;
+  }
+  .contenedorsillo .footer{
+  grid-area: footer;
+  width: 100%;
+  background: #7f4fdf;
+  }
+  
+  @media screen and (max-width: 720px){
+  .contenedorsillo{
+  grid-template-areas:  "header header"
+                      "menudo  menudo"
+                      "ingrese  Registro"
+                      "ingrese  Registro"
+                      "footer footer";
+  }
+  }
